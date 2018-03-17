@@ -1,4 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    AutoPosting-app
+    AutoPosting-app \
+    Telsearch \
+    PingenLib \
+    TelsearchTests

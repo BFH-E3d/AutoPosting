@@ -1,0 +1,12 @@
+#ifndef PINGENLIB_GLOBAL_H
+#define PINGENLIB_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(PINGENLIB_LIBRARY)
+#  define PINGENLIBSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define PINGENLIBSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // PINGENLIB_GLOBAL_H
