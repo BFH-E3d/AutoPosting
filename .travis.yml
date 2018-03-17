@@ -1,15 +1,11 @@
 language: cpp
 sudo: required
 dist: trusty
-compiler: gcc
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - beineri/opt-qt-5.10.1-trusty
-    packages:
-      - gcc-7
-      - qt510-meta
+before_install:
+  - sudo apt-add-repository beineri/opt-qt-5.10.1-trusty
+  - sudo apt-add-repository ubuntu-toolchain-r-test
+  - sudo apt-get -qq update
+  - sudo apt-get install -y gcc-7 qt510-meta
 script:
   - source /opt/qt510/bin/qt510-env.s
   - qmake -v
