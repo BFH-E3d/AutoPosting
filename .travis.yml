@@ -1,0 +1,17 @@
+language: cpp
+sudo: required
+dist: trusty
+compiler: gcc
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - beineri/opt-qt-5.10.1-trusty
+    packages:
+      - gcc-7
+      - qt510-meta
+script:
+  - source /opt/qt510/bin/qt510-env.s
+  - qmake -v
+  - CC=g++-6 qmake -r
+  - CC=g++-6 make
