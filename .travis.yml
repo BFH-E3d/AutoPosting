@@ -9,8 +9,7 @@ before_install:
 script:
   - unset CC && export CC=gcc-7
   - unset CXX && export CXX=g++-7
-  - source /opt/qt510/bin/qt510-env.s
-  - qmake -v
-  - gcc --version
+  - source /opt/qt510/bin/qt510-env.sh
+  - qmake -v && CC --version && CXX --version
   - qmake -r
-  - Cmake
+  - make
