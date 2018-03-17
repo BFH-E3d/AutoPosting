@@ -2,12 +2,13 @@ language: cpp
 sudo: required
 dist: trusty
 before_install:
-  - sudo apt-add-repository ppa:beineri/opt-qt-5.10.1-trusty
-  - sudo apt-add-repository ppa:ubuntu-toolchain-r-test
+  - sudo apt-add-repository -y ppa:beineri/opt-qt-5.10.1-trusty
+  - sudo apt-add-repository -y ppa:ubuntu-toolchain-r-test
   - sudo apt-get -qq update
   - sudo apt-get install -y gcc-7 qt510-meta
 script:
   - source /opt/qt510/bin/qt510-env.s
   - qmake -v
-  - CC=g++-6 qmake -r
-  - CC=g++-6 make
+  - gcc --version
+  - CC=gcc-6 CXX=g++-6 qmake -r
+  - CC=gcc-6 CXX=g++-6 make
