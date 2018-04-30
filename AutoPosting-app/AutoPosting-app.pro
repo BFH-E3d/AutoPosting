@@ -4,12 +4,13 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = AutoPosting-app
 TEMPLATE = app
+CONFIG += c++14
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
@@ -25,10 +26,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    letter.cpp \
+    telsearch.cpp \
+    telsearch_entry.cpp \
+    telsearch_request.cpp \
+    telsearch_settings.cpp \
+    PingenAPI.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    PingenAPI.h \
+    telsearch.h \
+    telsearch_entry.h \
+    telsearch_request.h \
+    telsearch_settings.h \
+    telsearch_xml.h \
+    letter.h
 
 FORMS += \
         mainwindow.ui
+
+SUBDIRS += \
+    AutoPosting-app.pro
+
+RESOURCES += \
+    Images.qrc

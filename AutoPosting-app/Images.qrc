@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons8-send-24.png</file>
+        <file>icons8-find-user-male-24.png</file>
+    </qresource>
+</RCC>
