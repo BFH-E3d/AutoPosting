@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>icons8-send-24.png</file>
         <file>icons8-find-user-male-24.png</file>
+        <file>A-Priority.png</file>
+        <file>bw.png</file>
     </qresource>
 </RCC>

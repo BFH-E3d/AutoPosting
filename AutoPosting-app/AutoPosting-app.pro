@@ -32,7 +32,8 @@ SOURCES += \
     telsearch_entry.cpp \
     telsearch_request.cpp \
     telsearch_settings.cpp \
-    PingenAPI.cpp
+    PingenAPI.cpp \
+    SearchDialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -42,10 +43,12 @@ HEADERS += \
     telsearch_request.h \
     telsearch_settings.h \
     telsearch_xml.h \
-    letter.h
+    letter.h \
+    SearchDialog.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    SearchDialog.ui
 
 SUBDIRS += \
     AutoPosting-app.pro

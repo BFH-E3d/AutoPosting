@@ -24,8 +24,14 @@ public slots:
 
     void get_adr(QList<telsearch_entry> adresses);
 
+private slots:
+    void on_actionA_Post_triggered();
+
+    void on_actionBlack_and_White_triggered();
+
 private:
     Ui::MainWindow *ui;
+    void price_update();
 };
 
 #endif // MAINWINDOW_H
