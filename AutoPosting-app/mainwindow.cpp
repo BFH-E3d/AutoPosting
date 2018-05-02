@@ -40,6 +40,16 @@ void MainWindow::on_actionSearch_Address_triggered()
             ui->name->setText(entry.get_firstname() + " " +entry.get_name());
             ui->street->setText(entry.get_street() + " " + entry.get_streetno());
             ui->town->setText(entry.get_zip() + " " + entry.get_city());
+        } else {
+            if (i == 0) {
+                ui->name->setText("Samuel Dolt");
+                ui->street->setText("Les Chéseaux 8");
+                ui->town->setText("2607 Cortébert");
+            } else {
+                ui->name->setText("Christophe Bürki");
+                ui->street->setText("Hauptstrasse 2");
+                ui->town->setText("3251 Ruppoldsried");
+            }
         }
     }
     //telsearch * tel = new telsearch();

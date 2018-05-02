@@ -55,3 +55,6 @@ SUBDIRS += \
 
 RESOURCES += \
     Images.qrc
+
+DISTFILES += \
+    model.qmodel

@@ -44,7 +44,10 @@ void telsearch::request_error(telsearch_request *request)
     search_error = true;
     search_done = true;
 
-     //qDebug() << "error! something strange happend!";
+     qDebug() << "error! something strange happend!";
+
+     emit send_adr(void_list);
+
 }
 
 void telsearch::received_adresses(QList<telsearch_entry> adresses, telsearch_request *request)
@@ -55,7 +58,7 @@ void telsearch::received_adresses(QList<telsearch_entry> adresses, telsearch_req
 
     emit send_adr(adresses);
 
-    //qDebug() << adresses.count() << "Results found";
+    qDebug() << adresses.count() << "Results found";
     //for(int i =0; i<adresses.count(); i++)
     //{
     //    adresses[i].printAdress();

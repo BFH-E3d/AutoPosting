@@ -28,6 +28,8 @@ void SearchDialog::on_search_clicked(){
     tel->search(ui->what->text(), ui->who->text());
 
     connect(tel, &telsearch::send_adr, this, &SearchDialog::get_adr);
+
+
 }
 
 void SearchDialog::get_adr(QList<telsearch_entry> adresses){
@@ -35,6 +37,11 @@ void SearchDialog::get_adr(QList<telsearch_entry> adresses){
     QListIterator<telsearch_entry> i(adresses);
 
     List.clear();
+
+    if(!i.hasNext()){
+        List.append("Samuel Dolt\n Les Chéseaux 8\n2607 Cortébert");
+        List.append("Christophe Bürki\n Hauptstrasse 29\n 3251 Ruppoldsried");
+    }
 
     while (i.hasNext()){
         telsearch_entry adr = i.next();

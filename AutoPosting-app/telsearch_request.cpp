@@ -38,7 +38,7 @@ void telsearch_request::getNetworkReply( QNetworkReply * reply)
 {
     int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
 
-   // qDebug() <<  "Antwort erhalten HTTP_" + QString::number(statusCode);
+    qDebug() <<  "Antwort erhalten HTTP_" + QString::number(statusCode);
 
     xml_data = "";
 
